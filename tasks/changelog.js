@@ -98,7 +98,7 @@ module.exports = function (grunt) {
 		// Build our options for the git log command. Only print the commit message.
 		var args = [
 			'log',
-			'--pretty=format:%s',
+			"--pretty=format:'%s (%an)'", // added the Author
 			'--no-merges',
 			'--after="' + options.after + '"',
 			'--before="' + options.before + '"'
